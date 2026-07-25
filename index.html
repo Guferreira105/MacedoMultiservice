@@ -811,10 +811,12 @@ section{padding:120px 0;position:relative}
 
 <script>
 // ---- CONFIG ----
+// Preencha publicKey / serviceID / templateID com as chaves da sua conta em emailjs.com
+// (Account > General = publicKey; Email Services = serviceID; Email Templates = templateID)
 const CONFIG = {
   emailjs: { publicKey: 'YOUR_PUBLIC_KEY', serviceID: 'YOUR_SERVICE_ID', templateID: 'YOUR_TEMPLATE_ID', enabled: true },
   whatsapp: { number: '34613965087', enabled: true },
-  php: { url: 'send.php', enabled: true }
+  php: { url: 'send.php', enabled: false } // desativado: Vercel não executa PHP
 };
 emailjs.init(CONFIG.emailjs.publicKey);
 
